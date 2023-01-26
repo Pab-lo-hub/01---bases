@@ -1,1 +1,26 @@
 <p>Star Wars!</p>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <h3>Personajes</h3>
+        <ul>
+            <li>Padme - 700</li>
+            <li>Vader - 15000</li>
+            <li>Han Solo - 8,500</li>
+        </ul>
+    </div>
+    <div class="col">
+        <h3>Agregar<small> {{ nuevo.nombre }}</small></h3>
+        <hr>
+        <form (ngSubmit)="agregar()">
+            <input type="text" placeholder="Nombre" name="nombre" [(ngModel)]="nuevo.nombre" />
+            <!-- // [value]="nuevo.nombre" 
+            // (input)="cambiarNombre( $event )" -->
+            <input type="number" placeholder="Poder" name="poder" [(ngModel)]="nuevo.poder" />
+            <button type="submit">
+                Agregar
+            </button>
+        </form>
+    </div>
+</div>
