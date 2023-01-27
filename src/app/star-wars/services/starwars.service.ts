@@ -14,13 +14,13 @@ export class StarWarsService {
         }
       ];
     
-    
     public get personajes() : Personaje[] {
         return [...this._personajes];
     }
-    
 
-    constructor() {
-        console.log('Servicio inicilizado');
+    constructor() {}
+
+    agregarPersonaje ( personaje: Personaje) {
+      this._personajes.push( personaje );
     }
 }
