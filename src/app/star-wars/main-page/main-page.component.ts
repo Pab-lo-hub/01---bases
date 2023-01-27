@@ -16,25 +16,15 @@ export class MainPageComponent {
       nombre: 'R2',
       poder: 6000, 
     }
-  ]
+  ];
 
   nuevo: Personaje = {
-    nombre: '',
-    poder: 0,
+    nombre: 'Yoda',
+    poder: 300000,
   }
 
-  cambiarNombre( event: any ) {
-    console.log(event.target.value);
-  }
-
-  agregar() {
-    if (this.nuevo.nombre.trim().length === 0){
-      return;
-    }
-    this.personajes.push( this.nuevo )
-    this.nuevo = {
-      nombre: '',
-      poder: 0
-    }
+  agregarNuevoPersonaje(argumento: Personaje){
+    console.log(argumento);
+    this.personajes.push(argumento)
   }
 }
